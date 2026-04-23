@@ -30,38 +30,19 @@ export function SectionDivider({
           style={{ background: `linear-gradient(to left, ${color}, transparent)` }}
         />
 
-        {/* Ornament: outer diamond + inner dot */}
+        {/* Logo 5 — isolated "E" mark */}
         <motion.div
-          initial={{ opacity: 0, scale: 0 }}
+          initial={{ opacity: 0, scale: 0.6 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, amount: 0.8 }}
-          transition={{ duration: 0.5, delay: 0.4, ease: "backOut" }}
-          className="flex items-center justify-center mx-3 flex-shrink-0"
+          transition={{ duration: 0.5, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
+          className="flex items-center justify-center mx-4 flex-shrink-0"
         >
-          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-            {/* Outer diamond (rotated square) */}
-            <rect
-              x="11"
-              y="1.5"
-              width="13.4"
-              height="13.4"
-              rx="0"
-              transform="rotate(45 11 11)"
-              stroke={color}
-              strokeWidth="1.2"
-              fill="none"
-            />
-            {/* Inner filled diamond */}
-            <rect
-              x="11"
-              y="7"
-              width="5.66"
-              height="5.66"
-              rx="0"
-              transform="rotate(45 11 11)"
-              fill={color}
-            />
-          </svg>
+          <img
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5-vSSguVgVSlnxXXO6iXXQOUhQ2Y07vg.png"
+            alt=""
+            className="w-8 h-8 object-contain"
+          />
         </motion.div>
 
         {/* Right line */}

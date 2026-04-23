@@ -10,6 +10,7 @@ import { LocationSection } from "@/components/location-section"
 import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
 import { SectionDivider } from "@/components/section-divider"
+import { ManifestoSection } from "@/components/manifesto-section"
 
 export default function Home() {
   return (
@@ -18,6 +19,9 @@ export default function Home() {
       <HeroSection />
       <StatsSection />
       <ServicesSection />
+      <SectionDivider bg="#0A1628" color="#C9A84C" />
+      <ManifestoSection />
+      <SectionDivider bg="#0A1628" color="#C9A84C" />
       <ProcessSection />
       <DifferentialsSection />
       <TestimonialsSection />

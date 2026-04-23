@@ -9,11 +9,14 @@ export function Footer() {
     >
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
-          {/* Brand */}
+          {/* Brand — logo 1: vertical stacked */}
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <ShieldIcon className="w-7 h-7 text-[#C9A84C]" />
-              <span className="font-serif text-lg font-bold text-white tracking-wide">ELEMENTUS</span>
+            <div className="mb-4">
+              <img
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-HRKSC29pjx4k0AbEDLs0MApemfrMuO.png"
+                alt="Elementus Marcas e Patentes"
+                className="h-20 w-auto object-contain"
+              />
             </div>
             <p className="text-[#8A9BB0] text-sm leading-relaxed">
               Protegendo marcas, construindo legados.
@@ -84,15 +87,6 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
-}
-
-function ShieldIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.25C17.25 22.15 21 17.25 21 12V7L12 2z" />
-      <path d="M9 12l2 2 4-4" />
-    </svg>
   )
 }
 
