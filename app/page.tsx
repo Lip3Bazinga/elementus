@@ -5,6 +5,8 @@ import { ServicesSection } from "@/components/services-section"
 import { ProcessSection } from "@/components/process-section"
 import { DifferentialsSection } from "@/components/differentials-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
+import { TeamSection } from "@/components/team-section"
+import { LocationSection } from "@/components/location-section"
 import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
 
@@ -18,6 +20,8 @@ export default function Home() {
       <ProcessSection />
       <DifferentialsSection />
       <TestimonialsSection />
+      <TeamSection />
+      <LocationSection />
       <ContactSection />
       <Footer />
     </main>
