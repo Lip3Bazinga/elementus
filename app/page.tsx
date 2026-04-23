@@ -19,9 +19,7 @@ export default function Home() {
       <HeroSection />
       <StatsSection />
       <ServicesSection />
-      <SectionDivider bg="#0A1628" color="#C9A84C" />
       <ManifestoSection />
-      <SectionDivider bg="#0A1628" color="#C9A84C" />
       <ProcessSection />
       <DifferentialsSection />
       <TestimonialsSection />

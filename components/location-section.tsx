@@ -39,13 +39,12 @@ const fadeUp = {
 export function LocationSection() {
   return (
     <section id="localizacao" className="relative bg-[#0A1628] py-28 overflow-hidden">
-      {/* Background grid pattern */}
+      {/* Background dot pattern */}
       <div
-        className="absolute inset-0 opacity-[0.04]"
+        className="absolute inset-0 opacity-[0.07]"
         style={{
-          backgroundImage:
-            "linear-gradient(rgba(201,168,76,1) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,1) 1px, transparent 1px)",
-          backgroundSize: "48px 48px",
+          backgroundImage: "radial-gradient(circle, rgba(201,168,76,0.8) 1px, transparent 1px)",
+          backgroundSize: "32px 32px",
         }}
       />
 

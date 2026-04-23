@@ -41,7 +41,7 @@ export function SectionDivider({
           <img
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5-vSSguVgVSlnxXXO6iXXQOUhQ2Y07vg.png"
             alt=""
-            className="w-8 h-8 object-contain"
+            className="w-14 h-14 object-contain"
           />
         </motion.div>
 
