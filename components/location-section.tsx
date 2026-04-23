@@ -59,7 +59,7 @@ export function LocationSection() {
           variants={fadeUp}
         >
           <span className="inline-block text-xs font-semibold tracking-[0.2em] text-[#C9A84C] uppercase mb-4">
-            Onde Estamos
+            Onde estamos
           </span>
           <h2 className="font-serif text-4xl lg:text-5xl font-bold text-white mb-5 text-balance">
             Venha nos{" "}
@@ -92,7 +92,7 @@ export function LocationSection() {
               {/* Gold corner accent */}
               <div className="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-[#C9A84C]/90 backdrop-blur-sm">
                 <span className="text-xs font-semibold text-[#0A1628] tracking-wide">
-                  Nosso Escritório
+                  Nosso escritório
                 </span>
               </div>
             </motion.div>

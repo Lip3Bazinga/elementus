@@ -4,9 +4,9 @@ import { useEffect, useRef, useState } from "react"
 import { motion, useInView, useMotionValue, useSpring } from "framer-motion"
 
 const stats = [
-  { value: 500, suffix: "+", label: "Marcas Registradas" },
-  { value: 98, suffix: "%", label: "Taxa de Aprovação" },
-  { value: 5, suffix: "", label: "Anos de Experiência" },
+  { value: 500, suffix: "+", label: "Marcas registradas" },
+  { value: 98, suffix: "%", label: "Taxa de aprovação" },
+  { value: 5, suffix: "", label: "Anos de experiência" },
 ]
 
 function AnimatedCounter({

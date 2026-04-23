@@ -6,7 +6,7 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 const navLinks = [
   { label: "Início", href: "#inicio" },
   { label: "Serviços", href: "#servicos" },
-  { label: "Como Funciona", href: "#como-funciona" },
+  { label: "Como funciona", href: "#como-funciona" },
   { label: "Time", href: "#time" },
   { label: "Localização", href: "#localizacao" },
   { label: "Contato", href: "#contato" },
@@ -120,7 +120,7 @@ export function Navbar() {
                 background: "linear-gradient(135deg, #C9A84C, #E8C96A, #A87C2A)",
               }}
             >
-              Proteja sua Marca
+              Proteja sua marca
             </motion.a>
           </motion.div>
 
@@ -191,7 +191,7 @@ export function Navbar() {
                     background: "linear-gradient(135deg, #C9A84C, #E8C96A, #A87C2A)",
                   }}
                 >
-                  Proteja sua Marca
+                  Proteja sua marca
                 </motion.a>
               </motion.div>
             </motion.div>

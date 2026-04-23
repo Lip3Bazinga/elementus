@@ -66,7 +66,7 @@ export function ContactSection() {
           className="text-xs tracking-[0.25em] font-semibold uppercase mb-3"
           style={{ color: "#C9A84C" }}
         >
-          Fale Conosco
+          Fale conosco
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -75,7 +75,7 @@ export function ContactSection() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white text-balance mb-4"
         >
-          Pronto para Proteger sua Marca?
+          Pronto para proteger sua marca?
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 16 }}
@@ -170,7 +170,7 @@ export function ContactSection() {
               className="gold-shimmer-btn w-full py-4 rounded-xl font-semibold text-[#0A1628] text-base tracking-wide mt-1"
               style={{ background: "linear-gradient(135deg, #C9A84C, #E8C96A, #A87C2A)" }}
             >
-              Enviar Mensagem
+              Enviar mensagem
             </motion.button>
           </motion.form>
         )}

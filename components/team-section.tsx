@@ -8,7 +8,7 @@ const team = [
   {
     name: "Ana Beatriz Fontes",
     role: "Sócia Fundadora",
-    specialty: "Registro de Marcas & PI Estratégica",
+    specialty: "Registro de marcas & PI estratégica",
     bio: "Advogada com mais de 12 anos de experiência em propriedade intelectual, atuando em casos nacionais e internacionais. Especialista em estratégia de portfólio de marcas.",
     photo: "/images/team-ana.jpg",
     icon: ShieldIcon,
@@ -18,7 +18,7 @@ const team = [
   {
     name: "Carlos Eduardo Melo",
     role: "Sócio",
-    specialty: "Patentes & Inovação Tecnológica",
+    specialty: "Patentes & inovação tecnológica",
     bio: "Engenheiro de formação e advogado por vocação. Especialista em patentes de software, biotecnologia e equipamentos industriais, com sólida atuação junto ao INPI.",
     photo: "/images/team-carlos.jpg",
     icon: ScaleIcon,
@@ -28,7 +28,7 @@ const team = [
   {
     name: "Paula Rodrigues",
     role: "Especialista em Marcas",
-    specialty: "Busca, Análise e Oposição de Marcas",
+    specialty: "Busca, análise e oposição de marcas",
     bio: "Responsável pela equipe de pesquisa e análise de viabilidade de registro, com expertise em processos de oposição e nulidade administrativa junto ao INPI.",
     photo: "/images/team-paula.jpg",
     icon: SearchIcon,
@@ -75,7 +75,7 @@ export function TeamSection() {
           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
         >
           <span className="inline-block text-xs font-semibold tracking-[0.2em] text-[#C9A84C] uppercase mb-4">
-            Nosso Time
+            Nosso time
           </span>
           <h2 className="font-serif text-4xl lg:text-5xl font-bold text-[#0A1628] mb-5 text-balance">
             Especialistas que defendem{" "}

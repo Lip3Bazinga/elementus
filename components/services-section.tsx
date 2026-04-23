@@ -53,7 +53,7 @@ export function ServicesSection() {
             className="text-xs tracking-[0.25em] font-semibold uppercase mb-3"
             style={{ color: "#C9A84C" }}
           >
-            Nossas Especialidades
+            Nossas especialidades
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -63,7 +63,7 @@ export function ServicesSection() {
             className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-balance"
             style={{ color: "#0A1628" }}
           >
-            O Que Fazemos
+            O que fazemos
           </motion.h2>
           {/* Gold underline */}
           <motion.div

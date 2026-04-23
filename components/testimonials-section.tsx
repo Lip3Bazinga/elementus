@@ -57,7 +57,7 @@ export function TestimonialsSection() {
             className="font-serif text-3xl sm:text-4xl font-bold text-balance"
             style={{ color: "#0A1628" }}
           >
-            O Que Nossos Clientes Dizem
+            O que nossos clientes dizem
           </motion.h2>
           <motion.div
             initial={{ width: 0 }}

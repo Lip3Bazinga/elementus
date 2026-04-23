@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 
-const headline = "Sua Marca Merece Proteção Jurídica".split(" ")
+const headline = "Sua marca merece proteção jurídica".split(" ")
 
 const containerVariants = {
   hidden: {},
@@ -29,8 +29,8 @@ const particles = [
 
 const trustBadges = [
   { text: "Registro no INPI" },
-  { text: "Processo 100% Digital" },
-  { text: "Atendimento Especializado" },
+  { text: "Processo 100% digital" },
+  { text: "Atendimento especializado" },
 ]
 
 export function HeroSection() {
@@ -93,7 +93,7 @@ export function HeroSection() {
         >
           <div className="h-px w-8" style={{ background: "linear-gradient(135deg, #C9A84C, #E8C96A)" }} />
           <span className="text-[#C9A84C] text-xs tracking-[0.25em] font-semibold uppercase">
-            Propriedade Intelectual
+            Propriedade intelectual
           </span>
           <div className="h-px w-8" style={{ background: "linear-gradient(135deg, #C9A84C, #E8C96A)" }} />
         </motion.div>
@@ -152,7 +152,7 @@ export function HeroSection() {
               background: "linear-gradient(135deg, #C9A84C, #E8C96A, #A87C2A)",
             }}
           >
-            Iniciar Registro
+            Iniciar registro
           </motion.a>
           <motion.a
             href="#servicos"
@@ -161,7 +161,7 @@ export function HeroSection() {
             className="px-8 py-4 rounded-full font-semibold text-white text-base tracking-wide border transition-colors duration-200 hover:bg-white/5"
             style={{ borderColor: "rgba(201,168,76,0.5)" }}
           >
-            Saiba Mais
+            Saiba mais
           </motion.a>
         </motion.div>
 

@@ -49,7 +49,7 @@ export function ProcessSection() {
   const inView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="como-funciona" className="py-24" style={{ background: "#0A1628" }}>
+    <section id="como-funciona" className="relative pb-0 pt-24" style={{ background: "#0A1628" }}>
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
@@ -61,7 +61,7 @@ export function ProcessSection() {
             className="text-xs tracking-[0.25em] font-semibold uppercase mb-3"
             style={{ color: "#C9A84C" }}
           >
-            Passo a Passo
+            Passo a passo
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -70,7 +70,7 @@ export function ProcessSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white text-balance"
           >
-            Como Funciona
+            Como funciona
           </motion.h2>
           <motion.div
             initial={{ width: 0 }}
@@ -140,6 +140,18 @@ export function ProcessSection() {
             )
           })}
         </motion.div>
+      </div>
+
+      {/* Diagonal divider: navy → off-white (mirrors the testimonials→team divider) */}
+      <div className="relative h-20 w-full overflow-hidden mt-16" aria-hidden="true">
+        <svg
+          viewBox="0 0 1440 80"
+          preserveAspectRatio="none"
+          className="absolute inset-0 w-full h-full"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polygon points="0,0 1440,0 1440,80" fill="#F8F7F4" />
+        </svg>
       </div>
     </section>
   )

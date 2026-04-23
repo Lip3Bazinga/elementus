@@ -21,7 +21,7 @@ const itemVariants = {
 
 export function DifferentialsSection() {
   return (
-    <section id="diferenciais" className="relative overflow-hidden">
+    <section id="diferenciais" className="relative overflow-hidden" style={{ background: "#F8F7F4" }}>
       <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[520px]">
         {/* Left: dark navy */}
         <div
