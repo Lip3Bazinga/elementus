@@ -181,23 +181,7 @@ export function HeroSection() {
         </motion.div>
       </div>
 
-      {/* Bottom diagonal divider */}
-      <div
-        className="absolute bottom-0 left-0 right-0 h-20 pointer-events-none"
-        style={{
-          clipPath: "polygon(0 100%, 100% 100%, 100% 0)",
-          background: "#F8F7F4",
-        }}
-      />
 
-      {/* Animated gold divider line above clip */}
-      <motion.div
-        initial={{ scaleX: 0 }}
-        animate={{ scaleX: 1 }}
-        transition={{ duration: 1.2, delay: 1.5 }}
-        className="absolute bottom-20 left-0 right-0 h-px origin-left"
-        style={{ background: "linear-gradient(90deg, transparent, #C9A84C 20%, #C9A84C 80%, transparent)" }}
-      />
     </section>
   )
 }

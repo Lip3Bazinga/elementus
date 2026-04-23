@@ -57,13 +57,9 @@ export function TeamSection() {
   return (
     <section
       id="time"
-      className="relative py-28 bg-[#F8F7F4] overflow-hidden"
+      className="relative py-24 bg-[#F8F7F4] overflow-hidden"
     >
-      {/* Subtle top diagonal divider */}
-      <div
-        className="absolute top-0 left-0 right-0 h-20 bg-[#0A1628]"
-        style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 0)" }}
-      />
+
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}

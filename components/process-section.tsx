@@ -2,6 +2,7 @@
 
 import { useRef } from "react"
 import { motion, useInView } from "framer-motion"
+import { SectionDivider } from "@/components/section-divider"
 
 const steps = [
   {
@@ -49,7 +50,7 @@ export function ProcessSection() {
   const inView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="como-funciona" className="relative pb-0 pt-24" style={{ background: "#0A1628" }}>
+    <section id="como-funciona" className="relative py-24" style={{ background: "#0A1628" }}>
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
@@ -142,17 +143,7 @@ export function ProcessSection() {
         </motion.div>
       </div>
 
-      {/* Diagonal divider: navy → off-white (mirrors the testimonials→team divider) */}
-      <div className="relative h-20 w-full overflow-hidden mt-16" aria-hidden="true">
-        <svg
-          viewBox="0 0 1440 80"
-          preserveAspectRatio="none"
-          className="absolute inset-0 w-full h-full"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <polygon points="0,0 1440,0 0,80" fill="#F8F7F4" />
-        </svg>
-      </div>
+      <SectionDivider bg="#0A1628" color="#C9A84C" />
     </section>
   )
 }
