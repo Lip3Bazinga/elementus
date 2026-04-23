@@ -23,7 +23,39 @@ export function DifferentialsSection() {
   return (
     <section id="diferenciais" className="relative overflow-hidden" style={{ background: "#F8F7F4" }}>
       <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[520px]">
-        {/* Left: dark navy */}
+        {/* Left: off-white — checklist */}
+        <div
+          className="flex flex-col justify-center px-10 py-20 lg:px-16 lg:py-24"
+          style={{ background: "#F8F7F4" }}
+        >
+          <motion.ul
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            className="flex flex-col gap-6"
+          >
+            {differentials.map((item, i) => (
+              <motion.li
+                key={i}
+                variants={itemVariants}
+                className="flex items-start gap-4"
+              >
+                <div
+                  className="w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
+                  style={{ background: "linear-gradient(135deg, #C9A84C, #E8C96A)" }}
+                >
+                  <CheckIcon className="w-4 h-4 text-[#0A1628]" />
+                </div>
+                <span className="text-base leading-relaxed" style={{ color: "#0A1628" }}>
+                  {item}
+                </span>
+              </motion.li>
+            ))}
+          </motion.ul>
+        </div>
+
+        {/* Right: dark navy — headline */}
         <div
           className="relative flex flex-col justify-center px-10 py-20 lg:px-16 lg:py-24"
           style={{ background: "#0A1628" }}
@@ -38,9 +70,9 @@ export function DifferentialsSection() {
           />
           {/* Radial glow */}
           <div
-            className="absolute bottom-0 right-0 w-80 h-80 pointer-events-none"
+            className="absolute bottom-0 left-0 w-80 h-80 pointer-events-none"
             style={{
-              background: "radial-gradient(circle at bottom right, rgba(201,168,76,0.08), transparent 70%)",
+              background: "radial-gradient(circle at bottom left, rgba(201,168,76,0.08), transparent 70%)",
             }}
           />
 
@@ -88,38 +120,6 @@ export function DifferentialsSection() {
               para garantir a melhor experiência em proteção intelectual.
             </motion.p>
           </div>
-        </div>
-
-        {/* Right: off-white */}
-        <div
-          className="flex flex-col justify-center px-10 py-20 lg:px-16 lg:py-24"
-          style={{ background: "#F8F7F4" }}
-        >
-          <motion.ul
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            className="flex flex-col gap-6"
-          >
-            {differentials.map((item, i) => (
-              <motion.li
-                key={i}
-                variants={itemVariants}
-                className="flex items-start gap-4"
-              >
-                <div
-                  className="w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
-                  style={{ background: "linear-gradient(135deg, #C9A84C, #E8C96A)" }}
-                >
-                  <CheckIcon className="w-4 h-4 text-[#0A1628]" />
-                </div>
-                <span className="text-base leading-relaxed" style={{ color: "#0A1628" }}>
-                  {item}
-                </span>
-              </motion.li>
-            ))}
-          </motion.ul>
         </div>
       </div>
     </section>

@@ -150,7 +150,7 @@ export function ProcessSection() {
           className="absolute inset-0 w-full h-full"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <polygon points="0,0 1440,0 1440,80" fill="#F8F7F4" />
+          <polygon points="0,0 1440,0 0,80" fill="#F8F7F4" />
         </svg>
       </div>
     </section>
