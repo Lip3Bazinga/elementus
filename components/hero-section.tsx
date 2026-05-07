@@ -130,10 +130,9 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.9 }}
-          className="text-[#8A9BB0] text-lg sm:text-xl max-w-2xl leading-relaxed mb-10 text-balance"
+          className="text-[#8A9BB0] text-lg sm:text-xl max-w-4xl leading-relaxed mb-10 text-balance"
         >
-          Registro de marcas, patentes e propriedade intelectual com agilidade,
-          transparência e sem burocracia.
+          Registro de marcas, patentes, desenho industrial e programa de computador. Sua propriedade intelectual protegida com agilidade, transparência e sem burocracia.
         </motion.p>
 
         {/* CTAs */}
