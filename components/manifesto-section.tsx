@@ -96,8 +96,7 @@ export function ManifestoSection() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-center text-[#8A9BB0] max-w-2xl mx-auto leading-relaxed mb-20"
         >
-          Nascemos para romper com o modelo jurídico tradicional. Trazemos a agilidade das startups
-          para um setor que sempre foi lento — sem abrir mão da excelência técnica.
+          Nascemos para romper com o modelo jurídico tradicional. Trazemos agilidade e simplicidade no processo, sem renunciar à excelência técnica, profissionalismo e autoridade no assunto. 
         </motion.p>
 
         {/* Three pillars */}

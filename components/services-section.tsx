@@ -6,7 +6,7 @@ const services = [
   {
     title: "Registro de Marcas",
     description:
-      "Depósito junto ao INPI com acompanhamento completo em todas as etapas do processo.",
+      "Depósito junto ao INPI com acompanhamento completo em todas as etapas do processo, fortalecendo e valorizando sua marca.",
     icon: TagIcon,
   },
   {

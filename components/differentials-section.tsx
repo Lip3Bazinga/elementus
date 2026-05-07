@@ -116,8 +116,10 @@ export function DifferentialsSection() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-[#8A9BB0] leading-relaxed text-base"
             >
-              Nossa abordagem combina expertise jurídica com processos modernos
-              para garantir a melhor experiência em proteção intelectual.
+
+              Nossa abordagem combina expertise jurídica com processos modernos para garantir a melhor experiência em proteção intelectual.
+              Você e sua empresa merecem o melhor.
+              Escolha a Elementus.
             </motion.p>
           </div>
         </div>

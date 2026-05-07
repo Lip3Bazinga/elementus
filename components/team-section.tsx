@@ -2,56 +2,14 @@
 
 import Image from "next/image"
 import { motion } from "framer-motion"
-import { LinkedinIcon, ScaleIcon, ShieldIcon, SearchIcon } from "lucide-react"
+import { LinkedinIcon } from "lucide-react"
 
-const team = [
-  {
-    name: "Ana Beatriz Fontes",
-    role: "Sócia Fundadora",
-    specialty: "Registro de marcas & PI estratégica",
-    bio: "Advogada com mais de 12 anos de experiência em propriedade intelectual, atuando em casos nacionais e internacionais. Especialista em estratégia de portfólio de marcas.",
-    photo: "/images/team-ana.jpg",
-    icon: ShieldIcon,
-    oab: "OAB/SP 345.678",
-    linkedin: "#",
-  },
-  {
-    name: "Carlos Eduardo Melo",
-    role: "Sócio",
-    specialty: "Patentes & inovação tecnológica",
-    bio: "Engenheiro de formação e advogado por vocação. Especialista em patentes de software, biotecnologia e equipamentos industriais, com sólida atuação junto ao INPI.",
-    photo: "/images/team-carlos.jpg",
-    icon: ScaleIcon,
-    oab: "OAB/RJ 198.432",
-    linkedin: "#",
-  },
-  {
-    name: "Paula Rodrigues",
-    role: "Especialista em Marcas",
-    specialty: "Busca, análise e oposição de marcas",
-    bio: "Responsável pela equipe de pesquisa e análise de viabilidade de registro, com expertise em processos de oposição e nulidade administrativa junto ao INPI.",
-    photo: "/images/team-paula.jpg",
-    icon: SearchIcon,
-    oab: "OAB/MG 421.109",
-    linkedin: "#",
-  },
+const specialties = [
+  "Registro de marcas",
+  "Patentes",
+  "Desenho industrial",
+  "Programa de computador",
 ]
-
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: { staggerChildren: 0.18, delayChildren: 0.1 },
-  },
-}
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.65, ease: [0.22, 1, 0.36, 1] },
-  },
-}
 
 export function TeamSection() {
   return (
@@ -59,9 +17,7 @@ export function TeamSection() {
       id="time"
       className="relative py-24 bg-[#F8F7F4] overflow-hidden"
     >
-
-
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="relative max-w-6xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <motion.div
           className="text-center mb-16"
@@ -71,83 +27,93 @@ export function TeamSection() {
           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
         >
           <span className="inline-block text-xs font-semibold tracking-[0.2em] text-[#C9A84C] uppercase mb-4">
-            Nosso time
+            Quem está por trás
           </span>
-          <h2 className="font-serif text-4xl lg:text-5xl font-bold text-[#0A1628] mb-5 text-balance">
-            Especialistas que defendem{" "}
-            <span className="text-[#C9A84C]">sua marca</span>
+          <h2 className="font-serif text-4xl lg:text-5xl font-bold text-[#0A1628] text-balance">
+            Um especialista dedicado{" "}
+            <span className="text-[#C9A84C]">exclusivamente</span> a você
           </h2>
-          <p className="text-[#4A5568] max-w-2xl mx-auto leading-relaxed">
-            Uma equipe multidisciplinar com décadas de experiência combinada em propriedade intelectual, marcas, patentes e estratégia empresarial.
-          </p>
         </motion.div>
 
-        {/* Cards */}
+        {/* Profile card — horizontal */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.15 }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
+          className="bg-white rounded-3xl overflow-hidden shadow-lg border border-[#E8E4DC] flex flex-col lg:flex-row"
         >
-          {team.map((member) => {
-            const Icon = member.icon
-            return (
-              <motion.div
-                key={member.name}
-                variants={cardVariants}
-                whileHover={{ y: -6, transition: { duration: 0.3 } }}
-                className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-400 border border-[#E8E4DC]"
-              >
-                {/* Photo */}
-                <div className="relative h-72 overflow-hidden">
-                  <Image
-                    src={member.photo}
-                    alt={`Foto de ${member.name}`}
-                    fill
-                    className="object-cover object-top group-hover:scale-105 transition-transform duration-700"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
-                  {/* Gold gradient overlay at bottom */}
-                  <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#0A1628]/80 to-transparent" />
-                  {/* Role badge */}
-                  <div className="absolute bottom-4 left-4 flex items-center gap-2">
-                    <span className="flex items-center justify-center w-7 h-7 rounded-full bg-[#C9A84C]">
-                      <Icon className="w-3.5 h-3.5 text-[#0A1628]" />
-                    </span>
-                    <span className="text-xs font-semibold text-white tracking-wide">
-                      {member.role}
-                    </span>
-                  </div>
-                </div>
+          {/* Photo */}
+          <div className="relative w-full lg:w-96 shrink-0 min-h-80 lg:min-h-0">
+            <Image
+              src="/images/team-bruno.jpg"
+              alt="Foto de Bruno Henrique Alves de Sousa"
+              fill
+              className="object-cover object-top"
+              sizes="(max-width: 1024px) 100vw, 384px"
+              priority
+            />
+            {/* Bottom gradient */}
+            <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#0A1628]/70 to-transparent lg:hidden" />
+          </div>
 
-                {/* Content */}
-                <div className="p-6">
-                  <div className="flex items-start justify-between mb-1">
-                    <h3 className="font-serif text-xl font-bold text-[#0A1628]">
-                      {member.name}
-                    </h3>
-                    <a
-                      href={member.linkedin}
-                      aria-label={`LinkedIn de ${member.name}`}
-                      className="w-8 h-8 flex items-center justify-center rounded-full bg-[#F0EDE8] hover:bg-[#C9A84C] transition-colors duration-200 shrink-0 mt-0.5"
-                    >
-                      <LinkedinIcon className="w-4 h-4 text-[#0A1628]" />
-                    </a>
-                  </div>
-                  <p className="text-xs font-semibold text-[#C9A84C] tracking-wide uppercase mb-3">
-                    {member.specialty}
-                  </p>
-                  <p className="text-sm text-[#4A5568] leading-relaxed mb-4">
-                    {member.bio}
-                  </p>
-                  <div className="pt-4 border-t border-[#E8E4DC]">
-                    <span className="text-xs text-[#8A9BB0] font-mono">{member.oab}</span>
-                  </div>
-                </div>
-              </motion.div>
-            )
-          })}
+          {/* Content */}
+          <div className="flex flex-col justify-center px-8 py-10 lg:px-12 lg:py-12">
+            {/* Name + OAB */}
+            <div className="flex flex-wrap items-start justify-between gap-4 mb-2">
+              <div>
+                <h3 className="font-serif text-3xl lg:text-4xl font-bold text-[#0A1628] leading-tight">
+                  Bruno Henrique
+                </h3>
+                <h3 className="font-serif text-3xl lg:text-4xl font-bold text-[#0A1628] leading-tight">
+                  Alves de Sousa
+                </h3>
+              </div>
+              <a
+                href="#"
+                aria-label="LinkedIn de Bruno Henrique"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-[#F0EDE8] hover:bg-[#C9A84C] transition-colors duration-200 shrink-0 mt-1"
+              >
+                <LinkedinIcon className="w-5 h-5 text-[#0A1628]" />
+              </a>
+            </div>
+
+            <p className="text-xs font-semibold text-[#C9A84C] tracking-[0.2em] uppercase mb-1">
+              Advogado — OAB/SP 297.087
+            </p>
+
+            {/* Gold line */}
+            <motion.div
+              initial={{ width: 0 }}
+              whileInView={{ width: 56 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="h-0.5 mb-6 mt-4"
+              style={{ background: "linear-gradient(90deg, #C9A84C, #E8C96A)" }}
+            />
+
+            <p className="text-[#4A5568] leading-relaxed mb-8 max-w-xl">
+              Advogado com mais de 15 anos de experiência em propriedade intelectual, atuando de forma sólida junto ao INPI. Atendimento personalizado, sem intermediários — você fala diretamente com quem cuida do seu caso.
+            </p>
+
+            {/* Specialties */}
+            <div>
+              <p className="text-xs font-semibold text-[#0A1628] tracking-widest uppercase mb-3">
+                Especialidades
+              </p>
+              <ul className="flex flex-wrap gap-2">
+                {specialties.map((s) => (
+                  <li
+                    key={s}
+                    className="text-xs font-medium px-3 py-1.5 rounded-full border border-[#C9A84C]/40 text-[#0A1628] bg-[#C9A84C]/08"
+                    style={{ background: "rgba(201,168,76,0.08)" }}
+                  >
+                    {s}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>
