@@ -44,9 +44,9 @@ export function TeamSection() {
           className="bg-white rounded-3xl overflow-hidden shadow-lg border border-[#E8E4DC] flex flex-col lg:flex-row"
         >
           {/* Photo */}
-          <div className="relative w-full lg:w-96 shrink-0 min-h-80 lg:min-h-0">
+          <div className="relative w-full lg:w-96 shrink-0 min-h-80 lg:min-h-[480px]">
             <Image
-              src="/images/team-bruno.jpg"
+              src="/images/bruno-henrique.png"
               alt="Foto de Bruno Henrique Alves de Sousa"
               fill
               className="object-cover object-top"
@@ -93,7 +93,7 @@ export function TeamSection() {
             />
 
             <p className="text-[#4A5568] leading-relaxed mb-8 max-w-xl">
-              Advogado com mais de 15 anos de experiência em propriedade intelectual, atuando de forma sólida junto ao INPI. Atendimento personalizado, sem intermediários — você fala diretamente com quem cuida do seu caso.
+              Advogado com mais de 15 anos de experiência em propriedade intelectual, atuando de forma sólida junto ao INPI. Especialista em registro de marcas, patentes, desenho industrial e programa de computador.
             </p>
 
             {/* Specialties */}

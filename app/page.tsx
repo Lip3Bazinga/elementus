@@ -5,6 +5,7 @@ import { ProcessSection } from "@/components/process-section"
 import { DifferentialsSection } from "@/components/differentials-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { TeamSection } from "@/components/team-section"
+import { WorkflowSection } from "@/components/workflow-section"
 import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
 import { SectionDivider } from "@/components/section-divider"
@@ -22,6 +23,7 @@ export default function Home() {
       <TestimonialsSection />
       <SectionDivider bg="#F8F7F4" color="#C9A84C" />
       <TeamSection />
+      <WorkflowSection />
       <ContactSection />
       <Footer />
     </main>
