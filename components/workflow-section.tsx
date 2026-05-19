@@ -106,7 +106,7 @@ export function WorkflowSection() {
           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
         >
           <span className="inline-block text-xs font-semibold tracking-[0.2em] text-[#C9A84C] uppercase mb-4">
-            Como funciona
+            Na prática
           </span>
           <h2 className="font-serif text-4xl lg:text-5xl font-bold text-white mb-5 text-balance">
             Simples, rápido e{" "}
