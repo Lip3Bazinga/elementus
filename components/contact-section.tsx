@@ -56,156 +56,223 @@ export function ContactSection() {
         }}
       />
 
-      <div className="relative z-10 max-w-2xl mx-auto px-6 text-center">
-        {/* Header */}
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.5 }}
-          className="text-xs tracking-[0.25em] font-semibold uppercase mb-3"
-          style={{ color: "#C9A84C" }}
-        >
-          Fale conosco
-        </motion.p>
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white text-balance mb-4"
-        >
-          Pronto para proteger sua marca?
-        </motion.h2>
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-[#8A9BB0] leading-relaxed mb-10"
-        >
-          Entre em contato agora e receba uma análise de viabilidade gratuita.
-        </motion.p>
-
-        {submitted ? (
+      <div className="relative z-10 max-w-6xl mx-auto px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          {/* Left column: Contact Info */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="rounded-2xl p-10 text-center"
-            style={{
-              background: "rgba(255,255,255,0.05)",
-              border: "1px solid rgba(201,168,76,0.3)",
-            }}
-          >
-            <div
-              className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
-              style={{ background: "linear-gradient(135deg, #C9A84C, #E8C96A)" }}
-            >
-              <CheckIcon className="w-8 h-8 text-[#0A1628]" />
-            </div>
-            <h3 className="font-serif text-2xl font-bold text-white mb-2">Mensagem enviada!</h3>
-            <p className="text-[#8A9BB0]">Nossa equipe entrará em contato em breve.</p>
-          </motion.div>
-        ) : (
-          <motion.form
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.7, delay: 0.3 }}
-            onSubmit={handleSubmit}
-            className="flex flex-col gap-4 text-left"
-            noValidate
+            transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Seu nome"
-                  value={form.name}
-                  onChange={handleChange}
-                  className={inputClass}
-                />
-                {errors.name && <p className="text-red-400 text-xs mt-1">{errors.name}</p>}
-              </div>
-              <div>
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Seu e-mail"
-                  value={form.email}
-                  onChange={handleChange}
-                  className={inputClass}
-                />
-                {errors.email && <p className="text-red-400 text-xs mt-1">{errors.email}</p>}
-              </div>
-            </div>
-            <div>
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Seu telefone"
-                value={form.phone}
-                onChange={handleChange}
-                className={inputClass}
-              />
-              {errors.phone && <p className="text-red-400 text-xs mt-1">{errors.phone}</p>}
-            </div>
-            <div>
-              <textarea
-                name="message"
-                placeholder="Conte-nos sobre sua marca..."
-                rows={4}
-                value={form.message}
-                onChange={handleChange}
-                className={inputClass + " resize-none"}
-              />
-              {errors.message && <p className="text-red-400 text-xs mt-1">{errors.message}</p>}
-            </div>
-
-            <motion.button
-              type="submit"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="gold-shimmer-btn w-full py-4 rounded-xl font-semibold text-[#0A1628] text-base tracking-wide mt-1"
-              style={{ background: "linear-gradient(135deg, #C9A84C, #E8C96A, #A87C2A)" }}
+            <p
+              className="text-xs tracking-[0.25em] font-semibold uppercase mb-3"
+              style={{ color: "#C9A84C" }}
             >
-              Enviar mensagem
-            </motion.button>
-          </motion.form>
-        )}
+              Fale conosco
+            </p>
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white text-balance mb-6">
+              Pronto para proteger sua marca?
+            </h2>
+            <p className="text-[#8A9BB0] leading-relaxed mb-10">
+              Entre em contato agora e receba uma análise de viabilidade gratuita.
+            </p>
 
-        {/* WhatsApp CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-6"
-        >
-          <div className="flex items-center gap-4 mb-4">
-            <div className="flex-1 h-px" style={{ background: "rgba(201,168,76,0.2)" }} />
-            <span className="text-[#8A9BB0] text-xs">ou</span>
-            <div className="flex-1 h-px" style={{ background: "rgba(201,168,76,0.2)" }} />
-          </div>
-          <motion.a
-            href="https://wa.me/5500000000000"
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className="w-full flex items-center justify-center gap-3 py-4 rounded-xl font-semibold text-white text-base"
-            style={{
-              background: "#25D366",
-              boxShadow: "0 4px 24px rgba(37,211,102,0.25)",
-            }}
+            {/* Contact details */}
+            <div className="space-y-6">
+              {/* Address */}
+              <div className="flex items-start gap-4">
+                <div
+                  className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
+                  style={{ background: "rgba(201,168,76,0.1)", border: "1px solid rgba(201,168,76,0.2)" }}
+                >
+                  <MapPinIcon className="w-5 h-5 text-[#C9A84C]" />
+                </div>
+                <div>
+                  <p className="text-xs font-semibold text-[#C9A84C] tracking-widest uppercase mb-1">Endereço</p>
+                  <p className="text-white text-sm leading-relaxed">
+                    Rua Jupira Cunha Marcondes, 1980<br />
+                    Vila Tótoli, Franca/SP<br />
+                    CEP 14409-192
+                  </p>
+                </div>
+              </div>
+
+              {/* Hours */}
+              <div className="flex items-start gap-4">
+                <div
+                  className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
+                  style={{ background: "rgba(201,168,76,0.1)", border: "1px solid rgba(201,168,76,0.2)" }}
+                >
+                  <ClockIcon className="w-5 h-5 text-[#C9A84C]" />
+                </div>
+                <div>
+                  <p className="text-xs font-semibold text-[#C9A84C] tracking-widest uppercase mb-1">Atendimento</p>
+                  <p className="text-white text-sm leading-relaxed">
+                    Segunda a sexta-feira<br />
+                    08h às 18h
+                  </p>
+                </div>
+              </div>
+
+              {/* Phone */}
+              <div className="flex items-start gap-4">
+                <div
+                  className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
+                  style={{ background: "rgba(201,168,76,0.1)", border: "1px solid rgba(201,168,76,0.2)" }}
+                >
+                  <PhoneIcon className="w-5 h-5 text-[#C9A84C]" />
+                </div>
+                <div>
+                  <p className="text-xs font-semibold text-[#C9A84C] tracking-widest uppercase mb-1">Telefone</p>
+                  <a href="tel:+5516991435330" className="text-white text-sm hover:text-[#C9A84C] transition-colors">
+                    +55 (16) 9 9143-5330
+                  </a>
+                </div>
+              </div>
+
+              {/* WhatsApp CTA */}
+              <motion.a
+                href="https://wa.me/5516991435330"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="inline-flex items-center justify-center gap-3 px-6 py-3.5 rounded-xl font-semibold text-white text-sm mt-4"
+                style={{
+                  background: "#25D366",
+                  boxShadow: "0 4px 24px rgba(37,211,102,0.25)",
+                }}
+              >
+                <WhatsAppIcon className="w-5 h-5" />
+                Falar no WhatsApp
+              </motion.a>
+            </div>
+          </motion.div>
+
+          {/* Right column: Form */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.65, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
           >
-            <WhatsAppIcon className="w-5 h-5" />
-            Falar no WhatsApp
-          </motion.a>
-        </motion.div>
+            {submitted ? (
+              <div
+                className="rounded-2xl p-10 text-center h-full flex flex-col items-center justify-center"
+                style={{
+                  background: "rgba(255,255,255,0.05)",
+                  border: "1px solid rgba(201,168,76,0.3)",
+                }}
+              >
+                <div
+                  className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+                  style={{ background: "linear-gradient(135deg, #C9A84C, #E8C96A)" }}
+                >
+                  <CheckIcon className="w-8 h-8 text-[#0A1628]" />
+                </div>
+                <h3 className="font-serif text-2xl font-bold text-white mb-2">Mensagem enviada!</h3>
+                <p className="text-[#8A9BB0]">Entrarei em contato em breve.</p>
+              </div>
+            ) : (
+              <form
+                onSubmit={handleSubmit}
+                className="flex flex-col gap-4 p-8 rounded-2xl"
+                style={{
+                  background: "rgba(255,255,255,0.03)",
+                  border: "1px solid rgba(255,255,255,0.08)",
+                }}
+                noValidate
+              >
+                <p className="text-white font-semibold mb-2">Envie uma mensagem</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Seu nome"
+                      value={form.name}
+                      onChange={handleChange}
+                      className={inputClass}
+                    />
+                    {errors.name && <p className="text-red-400 text-xs mt-1">{errors.name}</p>}
+                  </div>
+                  <div>
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Seu e-mail"
+                      value={form.email}
+                      onChange={handleChange}
+                      className={inputClass}
+                    />
+                    {errors.email && <p className="text-red-400 text-xs mt-1">{errors.email}</p>}
+                  </div>
+                </div>
+                <div>
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Seu telefone"
+                    value={form.phone}
+                    onChange={handleChange}
+                    className={inputClass}
+                  />
+                  {errors.phone && <p className="text-red-400 text-xs mt-1">{errors.phone}</p>}
+                </div>
+                <div>
+                  <textarea
+                    name="message"
+                    placeholder="Conte-nos sobre sua marca..."
+                    rows={4}
+                    value={form.message}
+                    onChange={handleChange}
+                    className={inputClass + " resize-none"}
+                  />
+                  {errors.message && <p className="text-red-400 text-xs mt-1">{errors.message}</p>}
+                </div>
+
+                <motion.button
+                  type="submit"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="gold-shimmer-btn w-full py-4 rounded-xl font-semibold text-[#0A1628] text-base tracking-wide mt-1"
+                  style={{ background: "linear-gradient(135deg, #C9A84C, #E8C96A, #A87C2A)" }}
+                >
+                  Enviar mensagem
+                </motion.button>
+              </form>
+            )}
+          </motion.div>
+        </div>
       </div>
     </section>
+  )
+}
+
+function MapPinIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+      <circle cx="12" cy="10" r="3" />
+    </svg>
+  )
+}
+
+function ClockIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="10" />
+      <polyline points="12 6 12 12 16 14" />
+    </svg>
+  )
+}
+
+function PhoneIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+    </svg>
   )
 }
 
