@@ -83,7 +83,7 @@ export function ManifestoSection() {
           initial={{ opacity: 0, y: 24 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-center text-white leading-tight text-balance mb-6"
+          className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center text-white leading-tight text-balance mb-6"
         >
           Uma firma diferente.{" "}
           <span style={{ color: "#C9A84C" }}>De verdade.</span>
@@ -100,7 +100,7 @@ export function ManifestoSection() {
         </motion.p>
 
         {/* Three pillars */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
           {pillars.map((pillar, i) => (
             <motion.div
               key={pillar.keyword}
@@ -108,7 +108,7 @@ export function ManifestoSection() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.65, delay: 0.3 + i * 0.13, ease: [0.22, 1, 0.36, 1] }}
               whileHover={{ y: -6 }}
-              className="relative flex flex-col gap-5 rounded-2xl p-8 border"
+              className="relative flex flex-col gap-4 sm:gap-5 rounded-2xl p-6 sm:p-8 border"
               style={{
                 background: "rgba(255,255,255,0.03)",
                 borderColor: "rgba(201,168,76,0.15)",

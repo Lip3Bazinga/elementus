@@ -108,7 +108,7 @@ export function WorkflowSection() {
           <span className="inline-block text-xs font-semibold tracking-[0.2em] text-[#C9A84C] uppercase mb-4">
             Na prática
           </span>
-          <h2 className="font-serif text-4xl lg:text-5xl font-bold text-white mb-5 text-balance">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-5 text-balance">
             Simples, rápido e{" "}
             <span className="text-[#C9A84C]">100% online</span>
           </h2>
@@ -120,7 +120,7 @@ export function WorkflowSection() {
 
         {/* Steps grid */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"

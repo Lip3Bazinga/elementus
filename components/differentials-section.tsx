@@ -22,10 +22,10 @@ const itemVariants = {
 export function DifferentialsSection() {
   return (
     <section id="diferenciais" className="relative overflow-hidden" style={{ background: "#F8F7F4" }}>
-      <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[520px]">
+      <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[480px] lg:min-h-[520px]">
         {/* Left: off-white — checklist */}
         <div
-          className="flex flex-col justify-center px-10 py-20 lg:px-16 lg:py-24"
+          className="flex flex-col justify-center px-6 py-12 sm:px-10 sm:py-16 lg:px-16 lg:py-24 order-2 lg:order-1"
           style={{ background: "#F8F7F4" }}
         >
           <motion.ul
@@ -57,7 +57,7 @@ export function DifferentialsSection() {
 
         {/* Right: dark navy — headline */}
         <div
-          className="relative flex flex-col justify-center px-10 py-20 lg:px-16 lg:py-24"
+          className="relative flex flex-col justify-center px-6 py-12 sm:px-10 sm:py-16 lg:px-16 lg:py-24 order-1 lg:order-2"
           style={{ background: "#0A1628" }}
         >
           {/* Noise texture */}
@@ -93,7 +93,7 @@ export function DifferentialsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="font-serif text-4xl lg:text-5xl font-bold text-white leading-tight text-balance mb-3"
+              className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight text-balance mb-3"
             >
               Simples.{" "}
               <span style={{ color: "#C9A84C" }}>Ágil.</span>{" "}

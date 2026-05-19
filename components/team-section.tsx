@@ -29,7 +29,7 @@ export function TeamSection() {
           <span className="inline-block text-xs font-semibold tracking-[0.2em] text-[#C9A84C] uppercase mb-4">
             Quem está por trás
           </span>
-          <h2 className="font-serif text-4xl lg:text-5xl font-bold text-[#0A1628] text-balance">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A1628] text-balance">
             Um especialista dedicado{" "}
             <span className="text-[#C9A84C]">exclusivamente</span> a você
           </h2>
@@ -44,7 +44,7 @@ export function TeamSection() {
           className="bg-white rounded-3xl overflow-hidden shadow-lg border border-[#E8E4DC] flex flex-col lg:flex-row"
         >
           {/* Photo */}
-          <div className="relative w-full lg:w-96 shrink-0 min-h-80 lg:min-h-[480px]">
+          <div className="relative w-full lg:w-96 shrink-0 h-72 sm:h-80 lg:h-auto lg:min-h-[480px]">
             <Image
               src="/images/bruno-henrique.png"
               alt="Foto de Bruno Henrique Alves de Sousa"
@@ -58,14 +58,14 @@ export function TeamSection() {
           </div>
 
           {/* Content */}
-          <div className="flex flex-col justify-center px-8 py-10 lg:px-12 lg:py-12">
+          <div className="flex flex-col justify-center px-6 py-8 sm:px-8 sm:py-10 lg:px-12 lg:py-12">
             {/* Name + OAB */}
             <div className="flex flex-wrap items-start justify-between gap-4 mb-2">
               <div>
-                <h3 className="font-serif text-3xl lg:text-4xl font-bold text-[#0A1628] leading-tight">
+                <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0A1628] leading-tight">
                   Bruno Henrique
                 </h3>
-                <h3 className="font-serif text-3xl lg:text-4xl font-bold text-[#0A1628] leading-tight">
+                <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0A1628] leading-tight">
                   Alves de Sousa
                 </h3>
               </div>

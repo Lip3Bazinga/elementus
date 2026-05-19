@@ -57,7 +57,7 @@ export function ContactSection() {
       />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
           {/* Left column: Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -177,7 +177,7 @@ export function ContactSection() {
             ) : (
               <form
                 onSubmit={handleSubmit}
-                className="flex flex-col gap-4 p-8 rounded-2xl"
+                className="flex flex-col gap-4 p-6 sm:p-8 rounded-2xl"
                 style={{
                   background: "rgba(255,255,255,0.03)",
                   border: "1px solid rgba(255,255,255,0.08)",

@@ -90,10 +90,10 @@ export function ProcessSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-4 gap-8 relative"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative"
         >
-          {/* Connecting dashed line (desktop) */}
-          <div className="hidden md:block absolute top-10 left-[12.5%] right-[12.5%] h-px" style={{ zIndex: 0 }}>
+          {/* Connecting dashed line (desktop only) */}
+          <div className="hidden lg:block absolute top-10 left-[12.5%] right-[12.5%] h-px" style={{ zIndex: 0 }}>
             <svg width="100%" height="2" className="overflow-visible">
               <motion.line
                 x1="0"

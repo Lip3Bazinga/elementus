@@ -103,7 +103,7 @@ export function HeroSection() {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="font-serif text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight text-balance mb-6 flex flex-wrap justify-center gap-x-4 gap-y-1"
+          className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-tight text-balance mb-6 flex flex-wrap justify-center gap-x-3 sm:gap-x-4 gap-y-1"
         >
           {headline.map((word, i) => (
             <motion.span key={i} variants={wordVariants}>
@@ -130,7 +130,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.9 }}
-          className="text-[#8A9BB0] text-lg sm:text-xl max-w-4xl leading-relaxed mb-10 text-balance"
+          className="text-[#8A9BB0] text-base sm:text-lg md:text-xl max-w-4xl leading-relaxed mb-10 text-balance px-2"
         >
           Registro de marcas, patentes, desenho industrial e programa de computador. Sua propriedade intelectual protegida com agilidade, transparência e sem burocracia.
         </motion.p>
@@ -169,7 +169,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.3 }}
-          className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8"
+          className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-6 md:gap-8"
         >
           {trustBadges.map((badge, i) => (
             <div key={i} className="flex items-center gap-2">

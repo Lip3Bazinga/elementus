@@ -7,8 +7,7 @@ const navLinks = [
   { label: "Início", href: "#inicio" },
   { label: "Serviços", href: "#servicos" },
   { label: "Como funciona", href: "#como-funciona" },
-  { label: "Time", href: "#time" },
-  { label: "Localização", href: "#localizacao" },
+  { label: "Especialista", href: "#time" },
   { label: "Contato", href: "#contato" },
 ]
 
@@ -161,10 +160,11 @@ export function Navbar() {
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.35, ease: "easeInOut" }}
-              className="md:hidden overflow-hidden"
+              className="md:hidden overflow-hidden absolute left-0 right-0 top-full"
+              style={{ background: "rgba(10, 22, 40, 0.98)", backdropFilter: "blur(16px)" }}
             >
               <motion.div
-                className="flex flex-col gap-4 pb-6 pt-2"
+                className="flex flex-col gap-4 pb-6 pt-4 px-6"
                 initial="hidden"
                 animate="visible"
                 variants={{
