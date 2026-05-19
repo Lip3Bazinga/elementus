@@ -7,30 +7,30 @@ import { SectionDivider } from "@/components/section-divider"
 const steps = [
   {
     number: "01",
-    title: "Análise de Viabilidade",
+    title: "Análise de viabilidade",
     description:
       "Verificamos se sua marca está disponível para registro junto ao INPI.",
     icon: SearchIcon,
   },
   {
     number: "02",
-    title: "Elaboração do Pedido",
+    title: "Elaboração do pedido",
     description:
-      "Preparamos toda a documentação necessária para o depósito.",
+      "O processo é todo online. Você envia a documentação por e-mail ou WhatsApp. Preparamos todos os formulários necessários para o depósito, através de um processo ágil e eficiente.",
     icon: FileIcon,
   },
   {
     number: "03",
     title: "Depósito no INPI",
     description:
-      "Realizamos o depósito oficial junto ao Instituto Nacional da Propriedade Industrial.",
+      "Realizamos o depósito oficial junto ao Instituto Nacional da Propriedade Industrial e enviamos o comprovante do pedido para você.",
     icon: SendIcon,
   },
   {
     number: "04",
     title: "Acompanhamento",
     description:
-      "Monitoramos todo o processo até a emissão do certificado de registro.",
+      "Monitoramos todo o processo até a concessão do certificado de registro, que também é emitido de forma digital, com envio imediato para você.",
     icon: ShieldCheckIcon,
   },
 ]
