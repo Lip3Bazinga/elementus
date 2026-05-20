@@ -37,7 +37,7 @@ export function HeroSection() {
   return (
     <section
       id="inicio"
-      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-24 sm:pt-20 lg:pt-0"
       style={{ background: "#0A1628" }}
     >
       {/* Noise texture */}
