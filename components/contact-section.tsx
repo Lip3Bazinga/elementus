@@ -21,6 +21,7 @@ export function ContactSection() {
   const [form, setForm] = useState<FormData>({ name: "", email: "", phone: "", message: "" })
   const [errors, setErrors] = useState<FormErrors>({})
   const [submitted, setSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   function validate(): boolean {
     const e: FormErrors = {}
@@ -33,9 +34,34 @@ export function ContactSection() {
     return Object.keys(e).length === 0
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
-    if (validate()) setSubmitted(true)
+    if (!validate()) return
+
+    setIsSubmitting(true)
+    try {
+      const response = await fetch("https://api.sheetmonkey.io/form/uZsW1TShcYmp6kybBSXnib", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          Nome: form.name,
+          Email: form.email,
+          Telefone: form.phone,
+          Mensagem: form.message,
+          Data: new Date().toLocaleString("pt-BR"),
+        }),
+      })
+
+      if (response.ok) {
+        setSubmitted(true)
+      }
+    } catch (error) {
+      console.error("Erro ao enviar formulário:", error)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
@@ -234,12 +260,13 @@ export function ContactSection() {
 
                 <motion.button
                   type="submit"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="gold-shimmer-btn w-full py-4 rounded-xl font-semibold text-[#0A1628] text-base tracking-wide mt-1"
+                  disabled={isSubmitting}
+                  whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
+                  whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
+                  className="gold-shimmer-btn w-full py-4 rounded-xl font-semibold text-[#0A1628] text-base tracking-wide mt-1 disabled:opacity-70"
                   style={{ background: "linear-gradient(135deg, #C9A84C, #E8C96A, #A87C2A)" }}
                 >
-                  Enviar mensagem
+                  {isSubmitting ? "Enviando..." : "Enviar mensagem"}
                 </motion.button>
               </form>
             )}
