@@ -160,41 +160,31 @@ export function Navbar() {
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.35, ease: "easeInOut" }}
-              className="md:hidden overflow-hidden absolute left-0 right-0 top-full"
-              style={{ background: "rgba(10, 22, 40, 0.98)", backdropFilter: "blur(16px)" }}
+              className="md:hidden overflow-hidden absolute left-0 right-0 top-full z-50"
+              style={{ background: "#0A1628" }}
             >
-              <motion.div
-                className="flex flex-col gap-4 pb-6 pt-4 px-6"
-                initial="hidden"
-                animate="visible"
-                variants={{
-                  hidden: {},
-                  visible: { transition: { staggerChildren: 0.06, delayChildren: 0.1 } },
-                }}
-              >
+              <div className="flex flex-col gap-4 pb-6 pt-4 px-6">
                 {navLinks.map((link) => (
-                  <motion.a
+                  <a
                     key={link.href}
                     href={link.href}
                     onClick={() => setMenuOpen(false)}
-                    variants={{ hidden: { x: -16, opacity: 0 }, visible: { x: 0, opacity: 1 } }}
-                    className="text-[#8A9BB0] hover:text-white transition-colors text-base tracking-wide"
+                    className="text-[#8A9BB0] hover:text-white transition-colors text-base tracking-wide py-2"
                   >
                     {link.label}
-                  </motion.a>
+                  </a>
                 ))}
-                <motion.a
+                <a
                   href="#contato"
                   onClick={() => setMenuOpen(false)}
-                  variants={{ hidden: { opacity: 0, y: 8 }, visible: { opacity: 1, y: 0 } }}
                   className="gold-shimmer-btn w-full text-center px-5 py-3 rounded-full text-sm font-semibold text-[#0A1628] mt-2"
                   style={{
                     background: "linear-gradient(135deg, #C9A84C, #E8C96A, #A87C2A)",
                   }}
                 >
                   Proteja sua marca
-                </motion.a>
-              </motion.div>
+                </a>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>

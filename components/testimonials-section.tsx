@@ -4,20 +4,20 @@ import { motion } from "framer-motion"
 
 const testimonials = [
   {
-    name: "Ana Beatriz Santos",
-    role: "Fundadora, Studio Beatriz Design",
+    name: "Gustavo Couto Rosa",
+    role: "Diretor, Grupo Belezeira",
     text: "A Elementus transformou minha preocupação em tranquilidade. O processo foi rápido, transparente e o acompanhamento foi impecável do começo ao fim.",
     rating: 5,
   },
   {
-    name: "Rafael Mendes",
-    role: "CEO, TechFlow Soluções",
-    text: "Registrar nossa marca parecia complexo demais, mas a equipe da Elementus tornou tudo simples. Hoje temos segurança jurídica completa para escalar.",
+    name: "Ricardo Lacerda",
+    role: "Diretor, Lynd Calçados",
+    text: "Registrar nossa marca parecia complexo demais, mas a Elementus tornou tudo simples. Hoje temos segurança jurídica completa para escalar.",
     rating: 5,
   },
   {
-    name: "Carla Oliveira",
-    role: "Proprietária, Espaço Carla Oliveira",
+    name: "Rodolfo Amaral",
+    role: "CEO, Blitzz",
     text: "Profissionalismo e agilidade em cada etapa. A análise de viabilidade gratuita me deu clareza e confiança para seguir em frente com o registro.",
     rating: 5,
   },
