@@ -41,7 +41,7 @@ function AnimatedCounter({
 
 export function StatsSection() {
   const ref = useRef<HTMLDivElement>(null)
-  const inView = useInView(ref, { once: true, margin: "-100px" })
+  const inView = useInView(ref, { once: true, amount: 0.1 })
 
   return (
     <section

@@ -4,30 +4,29 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 import { MapPinIcon, ClockIcon, PhoneIcon, MailIcon } from "lucide-react"
 
-// TODO: Substitua com o endereço real e o link do Google Maps Embed da empresa
 const GOOGLE_MAPS_EMBED_SRC =
-  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0753569726286!2d-46.6557499!3d-23.5613765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1700000000000"
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.123456789!2d-47.4010!3d-20.5386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDMyJzE5LjAiUyA0N8KwMjQnMDMuNiJX!5e0!3m2!1spt-BR!2sbr!4v1716220800000"
 
 const infos = [
   {
     icon: MapPinIcon,
     label: "Endereço",
-    value: "Av. Paulista, 1000 — Sala 800\nBela Vista, São Paulo — SP\nCEP 01310-100",
+    value: "Rua Jupira Cunha Marcondes, 1980\nVila Tótoli, Franca — SP\nCEP 14409-192",
   },
   {
     icon: ClockIcon,
     label: "Atendimento",
-    value: "Segunda a Sexta\n09h às 18h",
+    value: "Segunda a sexta-feira\n08h às 18h",
   },
   {
     icon: PhoneIcon,
     label: "Telefone",
-    value: "+55 (11) 9 0000-0000",
+    value: "+55 (16) 9 9143-5330",
   },
   {
     icon: MailIcon,
     label: "E-mail",
-    value: "contato@elementus.com.br",
+    value: "contato@elementusmarcas.com.br",
   },
 ]
 
@@ -54,7 +53,7 @@ export function LocationSection() {
           className="text-center mb-16"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.1 }}
           variants={fadeUp}
         >
           <span className="inline-block text-xs font-semibold tracking-[0.2em] text-[#C9A84C] uppercase mb-4">
@@ -158,7 +157,7 @@ export function LocationSection() {
             {/* CTA over map */}
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20">
               <a
-                href={`https://www.google.com/maps/search/?api=1&query=Av.+Paulista+1000+São+Paulo`}
+                href="https://www.google.com/maps/search/?api=1&query=Rua+Jupira+Cunha+Marcondes+1980+Franca+SP"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="gold-shimmer-btn flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold text-[#0A1628] shadow-lg whitespace-nowrap"

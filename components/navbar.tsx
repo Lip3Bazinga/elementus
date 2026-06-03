@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
+import Image from "next/image"
 
 const navLinks = [
   { label: "Início", href: "#inicio" },
@@ -24,6 +25,31 @@ export function Navbar() {
     const unsub = scrollY.on("change", (v) => setScrolled(v > 20))
     return unsub
   }, [scrollY])
+
+  function handleNavClick(e: React.MouseEvent<HTMLAnchorElement>, href: string) {
+    e.preventDefault()
+    const id = href.replace("#", "")
+    const target = document.getElementById(id)
+    if (!target) return
+
+    const navHeight = 80 // h-20 fixed header
+    const scrollToTarget = () => {
+      // Mede o alvo só depois que o layout estabilizou, senão o `top`
+      // fica errado enquanto o menu mobile ainda está colapsando.
+      const top = target.getBoundingClientRect().top + window.scrollY - navHeight
+      window.scrollTo({ top, behavior: "smooth" })
+    }
+
+    if (menuOpen) {
+      // No Android, fechar o menu (animação de height do AnimatePresence) causa
+      // um reflow que cancela um smooth scroll em andamento. Por isso fechamos
+      // primeiro e só scrollamos depois que a animação de fecho (0.35s) termina.
+      setMenuOpen(false)
+      setTimeout(scrollToTarget, 380)
+    } else {
+      scrollToTarget()
+    }
+  }
 
   // Entrance animation: slide down from above with stagger on links
   const headerVariants = {
@@ -65,7 +91,7 @@ export function Navbar() {
     >
       {/* Scrolled background layer — driven by scroll values */}
       <motion.div
-        className="absolute inset-0"
+        className="absolute inset-0 pointer-events-none"
         style={{
           backgroundColor: `rgba(10, 22, 40, ${bgOpacity.get()})`,
           backdropFilter: `blur(${blurAmount.get()}px)`,
@@ -82,16 +108,18 @@ export function Navbar() {
             className="flex items-center"
             variants={linkVariants}
           >
-            <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3-XQva4WF3K6wNFM8lv5McLC8KZQfDLv.png"
+            <Image
+              src="/logo-3.png"
               alt="Elementus Marcas e Patentes"
-              className="h-10 w-auto object-contain"
+              className="h-14 w-auto object-contain"
+              width={308}
+              height={56}
             />
           </motion.a>
 
           {/* Desktop Nav */}
           <motion.nav
-            className="hidden md:flex items-center gap-7"
+            className="hidden lg:flex items-center gap-7"
             variants={linkContainerVariants}
             initial="hidden"
             animate="visible"
@@ -100,6 +128,7 @@ export function Navbar() {
               <motion.a
                 key={link.href}
                 href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
                 variants={linkVariants}
                 className="text-sm text-[#8A9BB0] hover:text-[#C9A84C] transition-colors duration-200 tracking-wide relative group"
               >
@@ -110,9 +139,10 @@ export function Navbar() {
           </motion.nav>
 
           {/* CTA */}
-          <motion.div className="hidden md:flex items-center" variants={ctaVariants} initial="hidden" animate="visible">
+          <motion.div className="hidden lg:flex items-center" variants={ctaVariants} initial="hidden" animate="visible">
             <motion.a
               href="#contato"
+              onClick={(e) => handleNavClick(e, "#contato")}
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.96 }}
               className="gold-shimmer-btn px-5 py-2.5 rounded-full text-sm font-semibold text-[#0A1628] tracking-wide"
@@ -128,7 +158,7 @@ export function Navbar() {
           <motion.button
             aria-label="Abrir menu"
             onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden flex flex-col gap-1.5 p-2"
+            className="lg:hidden flex flex-col gap-1.5 p-2"
             variants={ctaVariants}
             initial="hidden"
             animate="visible"
@@ -160,7 +190,7 @@ export function Navbar() {
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.35, ease: "easeInOut" }}
-              className="md:hidden overflow-hidden absolute left-0 right-0 top-full"
+              className="lg:hidden overflow-hidden absolute left-0 right-0 top-full"
               style={{ background: "rgba(10, 22, 40, 0.98)", backdropFilter: "blur(16px)" }}
             >
               <motion.div
@@ -176,7 +206,7 @@ export function Navbar() {
                   <motion.a
                     key={link.href}
                     href={link.href}
-                    onClick={() => setMenuOpen(false)}
+                    onClick={(e) => handleNavClick(e, link.href)}
                     variants={{ hidden: { x: -16, opacity: 0 }, visible: { x: 0, opacity: 1 } }}
                     className="text-[#8A9BB0] hover:text-white transition-colors text-base tracking-wide"
                   >
@@ -185,7 +215,7 @@ export function Navbar() {
                 ))}
                 <motion.a
                   href="#contato"
-                  onClick={() => setMenuOpen(false)}
+                  onClick={(e) => handleNavClick(e, "#contato")}
                   variants={{ hidden: { opacity: 0, y: 8 }, visible: { opacity: 1, y: 0 } }}
                   className="gold-shimmer-btn w-full text-center px-5 py-3 rounded-full text-sm font-semibold text-[#0A1628] mt-2"
                   style={{

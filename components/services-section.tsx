@@ -48,7 +48,7 @@ export function ServicesSection() {
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.5 }}
             className="text-xs tracking-[0.25em] font-semibold uppercase mb-3"
             style={{ color: "#C9A84C" }}
@@ -58,7 +58,7 @@ export function ServicesSection() {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-balance"
             style={{ color: "#0A1628" }}
@@ -69,7 +69,7 @@ export function ServicesSection() {
           <motion.div
             initial={{ width: 0 }}
             whileInView={{ width: 60 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             className="h-0.5 mx-auto mt-4"
             style={{ background: "linear-gradient(135deg, #C9A84C, #E8C96A, #A87C2A)" }}
@@ -81,7 +81,7 @@ export function ServicesSection() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, amount: 0.1 }}
           className="grid grid-cols-1 sm:grid-cols-2 gap-6"
         >
           {services.map((service, i) => {

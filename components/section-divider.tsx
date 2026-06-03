@@ -24,7 +24,7 @@ export function SectionDivider({
         <motion.div
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
-          viewport={{ once: true, amount: 0.8 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="h-px flex-1 origin-right"
           style={{ background: `linear-gradient(to left, ${color}, transparent)` }}
@@ -34,7 +34,7 @@ export function SectionDivider({
         <motion.div
           initial={{ opacity: 0, scale: 0.6 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, amount: 0.8 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.5, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
           className="flex items-center justify-center mx-4 flex-shrink-0"
         >
@@ -49,7 +49,7 @@ export function SectionDivider({
         <motion.div
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
-          viewport={{ once: true, amount: 0.8 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="h-px flex-1 origin-left"
           style={{ background: `linear-gradient(to right, ${color}, transparent)` }}

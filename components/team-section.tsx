@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image"
 import { motion } from "framer-motion"
 import { LinkedinIcon } from "lucide-react"
 
@@ -23,7 +22,7 @@ export function TeamSection() {
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
         >
           <span className="inline-block text-xs font-semibold tracking-[0.2em] text-[#C9A84C] uppercase mb-4">
@@ -41,22 +40,8 @@ export function TeamSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
-          className="bg-white rounded-3xl overflow-hidden shadow-lg border border-[#E8E4DC] flex flex-col lg:flex-row"
+          className="bg-white rounded-3xl overflow-hidden shadow-lg border border-[#E8E4DC]"
         >
-          {/* Photo */}
-          <div className="relative w-full lg:w-96 shrink-0 h-72 sm:h-80 lg:h-auto lg:min-h-[480px]">
-            <Image
-              src="/images/bruno-henrique.png"
-              alt="Foto de Bruno Henrique Alves de Sousa"
-              fill
-              className="object-cover object-top"
-              sizes="(max-width: 1024px) 100vw, 384px"
-              priority
-            />
-            {/* Bottom gradient */}
-            <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#0A1628]/70 to-transparent lg:hidden" />
-          </div>
-
           {/* Content */}
           <div className="flex flex-col justify-center px-6 py-8 sm:px-8 sm:py-10 lg:px-12 lg:py-12">
             {/* Name + OAB */}

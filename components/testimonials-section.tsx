@@ -4,20 +4,20 @@ import { motion } from "framer-motion"
 
 const testimonials = [
   {
-    name: "Ana Beatriz Santos",
-    role: "Fundadora, Studio Beatriz Design",
+    name: "Gustavo Couto Rosa",
+    role: "Diretor, Grupo Belezeira",
     text: "A Elementus transformou minha preocupação em tranquilidade. O processo foi rápido, transparente e o acompanhamento foi impecável do começo ao fim.",
     rating: 5,
   },
   {
-    name: "Rafael Mendes",
-    role: "CEO, TechFlow Soluções",
+    name: "Ricardo Lacerda",
+    role: "Diretor, Lynd Calçados",
     text: "Registrar nossa marca parecia complexo demais, mas a equipe da Elementus tornou tudo simples. Hoje temos segurança jurídica completa para escalar.",
     rating: 5,
   },
   {
-    name: "Carla Oliveira",
-    role: "Proprietária, Espaço Carla Oliveira",
+    name: "Rodolfo Amaral",
+    role: "CEO, Blitzz",
     text: "Profissionalismo e agilidade em cada etapa. A análise de viabilidade gratuita me deu clareza e confiança para seguir em frente com o registro.",
     rating: 5,
   },
@@ -42,7 +42,7 @@ export function TestimonialsSection() {
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.5 }}
             className="text-xs tracking-[0.25em] font-semibold uppercase mb-3"
             style={{ color: "#C9A84C" }}
@@ -52,7 +52,7 @@ export function TestimonialsSection() {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-serif text-3xl sm:text-4xl font-bold text-balance"
             style={{ color: "#0A1628" }}
@@ -62,7 +62,7 @@ export function TestimonialsSection() {
           <motion.div
             initial={{ width: 0 }}
             whileInView={{ width: 60 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             className="h-0.5 mx-auto mt-4"
             style={{ background: "linear-gradient(135deg, #C9A84C, #E8C96A, #A87C2A)" }}
@@ -74,7 +74,7 @@ export function TestimonialsSection() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, amount: 0.1 }}
           className="grid grid-cols-1 md:grid-cols-3 gap-6"
         >
           {testimonials.map((t, i) => (

@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 export function Footer() {
   return (
     <footer
@@ -12,10 +14,12 @@ export function Footer() {
           {/* Brand — logo 1: vertical stacked */}
           <div>
             <div className="mb-4">
-              <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-HRKSC29pjx4k0AbEDLs0MApemfrMuO.png"
+              <Image
+                src="/logo-4.png"
                 alt="Elementus Marcas e Patentes"
-                className="h-20 w-auto object-contain"
+                className="h-28 w-auto object-contain"
+                width={224}
+                height={112}
               />
             </div>
             <p className="text-[#8A9BB0] text-sm leading-relaxed">
@@ -74,13 +78,6 @@ export function Footer() {
               >
                 <WhatsAppIcon className="w-4 h-4" />
               </a>
-              <a
-                href="#"
-                aria-label="Instagram"
-                className="w-9 h-9 rounded-full flex items-center justify-center border border-white/10 text-[#8A9BB0] hover:text-[#C9A84C] hover:border-[#C9A84C]/40 transition-colors duration-200"
-              >
-                <InstagramIcon className="w-4 h-4" />
-              </a>
             </div>
           </div>
         </div>
@@ -110,12 +107,3 @@ function WhatsAppIcon({ className }: { className?: string }) {
   )
 }
 
-function InstagramIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
-      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-    </svg>
-  )
-}
